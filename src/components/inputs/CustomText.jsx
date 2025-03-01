@@ -1,16 +1,26 @@
 import React from "react"
+import {useTheme} from "../../context/ThemeContext"
 
 const CustomText = ({placeHolder, type, onChange, icon = null}) => {
+  const {isDarkMode} = useTheme()
+
   return (
     <div
-      className="flex items-center gap-4
+      className={`flex items-center gap-4
                  rounded shadow-md 
-                 shadow-gray-200 text-gray-500
-                 px-5 py-2 max-w-[400px] w-[100%]"
+                ${
+                  isDarkMode
+                    ? " shadow-none text-white-500 bg-[#2b3743]"
+                    : " shadow-gray-200 text-gray-500"
+                }
+                 px-5 py-2 max-w-[400px] w-[100%]
+        `}
     >
       {icon && icon}
       <input
-        className="border-none outline-none text-gray-500"
+        className={`border-none outline-none ${
+          isDarkMode ? "text-white-500  placeholder-white" : "text-gray-500"
+        }`}
         type={type}
         onChange={onChange}
         placeholder={placeHolder}

@@ -1,12 +1,14 @@
 import React from "react"
 import {Link} from "react-router-dom"
+import {useTheme} from "../../context/ThemeContext"
 
 const FlagCard = ({img, countryName, population, region, capital}) => {
+  const {isDarkMode} = useTheme()
   return (
     <article
-      className="rounded-lg shadow-md 
+      className={`rounded-lg shadow-md 
                  overflow-hidden
-                 shadow-gray-200"
+                ${isDarkMode ? "shadow-none bg-[#2b3743]" : "shadow-gray-200"}`}
     >
       <Link to={`/details/${countryName}`}>
         <div className="h-[200px]">

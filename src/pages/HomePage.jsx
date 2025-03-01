@@ -21,7 +21,6 @@ const filterCountriesByRegion = (inputValue) => {
     }))
 }
 
-
 const promiseOptions = (inputValue) =>
   new Promise((resolve) => {
     setTimeout(() => {
@@ -65,7 +64,7 @@ const HomePage = () => {
     setSearchText(e.target.value)
   }
 
-    const handleRegionChange = (selected) => {
+  const handleRegionChange = (selected) => {
     setSelectedRegion(selected ? selected.value : "")
   }
 

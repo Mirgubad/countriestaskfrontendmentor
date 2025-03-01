@@ -2,32 +2,23 @@ import React, {useState} from "react"
 import ModeButton from "../buttons/ModeButton"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import {faMoon} from "@fortawesome/free-regular-svg-icons"
+import {faSun} from "@fortawesome/free-regular-svg-icons"
 
+import {useTheme} from "../../context/ThemeContext"
 const Navbar = () => {
-  const [darkMode, setDarkMode] = useState(false)
-
-  const handleModeButtonClick = () => {
-    setDarkMode(!darkMode)
-    // Optionally, add a body class to toggle dark mode styles globally
-    if (!darkMode) {
-      document.body.classList.add("dark")
-    } else {
-      document.body.classList.remove("dark")
-    }
-  }
-
+  const {isDarkMode, toggleMode} = useTheme()
   return (
     <div
       className={`shadow-md ${
-        darkMode ? "shadow-gray-700" : "shadow-gray-300"
+        isDarkMode ? "shadow-none bg-[#2b3743]" : "shadow-gray-300"
       } dark:bg-gray-800 dark:text-white`}
     >
       <div className="container flex justify-between p-4">
         <h2 className="text-l sm:text-3xl font-bold">Where in the world?</h2>
         <ModeButton
-          onClick={handleModeButtonClick}
-          icon={<FontAwesomeIcon icon={faMoon} />}
-          title={darkMode ? "Light Mode" : "Dark Mode"}
+          onClick={toggleMode}
+          icon={<FontAwesomeIcon icon={isDarkMode ? faMoon : faSun} />}
+          title={isDarkMode ? "Dark Mode" : "Light Mode"}
         />
       </div>
     </div>
