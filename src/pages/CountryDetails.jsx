@@ -101,7 +101,10 @@ const CountryDetails = () => {
               <strong className="font-bold">Border Countries: </strong>
               <div className="flex gap-2 ml-3">
                 {borders?.map((border) => (
-                  <div className="rounded border border-gray-300 px-2 py-1">
+                  <div
+                    key={border}
+                    className="rounded border border-gray-300 px-2 py-1"
+                  >
                     {" "}
                     {border}
                   </div>
