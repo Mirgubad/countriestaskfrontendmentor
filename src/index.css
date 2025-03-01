@@ -1,0 +1,115 @@
+/* Import Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+@import "tailwindcss";
+:root {
+  /* Neutral Colors */
+  --dark-blue: hsl(209, 23%, 22%);
+  --very-dark-blue-bg: hsl(207, 26%, 17%);
+  --very-dark-blue-text: hsl(200, 15%, 8%);
+  --dark-gray: hsl(0, 0%, 52%);
+  --very-light-gray: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+
+  /* Typography */
+  --font-family: "Nunito Sans", sans-serif;
+  --font-light: 300;
+  --font-semi-bold: 600;
+  --font-bold: 800;
+  --body-font-size: 14px;
+  --detail-font-size: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  font-weight: var(--font-light);
+  background-color: var(--very-light-gray);
+  color: var(--very-dark-blue-text);
+  font-size: var(--body-font-size);
+}
+body.dark {
+  background-color: #333;
+  color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: var(--font-bold);
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  background: none;
+  border: none;
+}
+
+input {
+  display: inline-block;
+  font-family: inherit;
+  font-size: var(--body-font-size);
+  padding: 0.5em;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.container {
+  padding: 1em;
+  max-width: 1450px;
+  margin: 0 auto;
+}
+.custom-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 50px;
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.dark-mode {
+  background-color: var(--very-dark-blue-bg);
+  color: var(--white);
+}
+
+.dark-mode .card {
+  background-color: var(--dark-blue);
+}
+
+.dark-mode input {
+  background-color: var(--dark-blue);
+  color: var(--white);
+  border: 1px solid var(--white);
+}
+
+@media (max-width: 375px) {
+  body {
+    font-size: var(--body-font-size);
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    padding: 2em;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar-title {
+    font-size: 32px;
+  }
+}
