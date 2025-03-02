@@ -1,47 +1,27 @@
-🌍 Countries Explorer
+# 🌍 Countries Explorer
 
-Welcome to the Countries Explorer project! This web application allows users to explore detailed information about countries worldwide.
+Welcome to the **Countries Explorer** project! This web application allows users to explore detailed information about countries worldwide.
 
-🔗 Live Demo
+### 🔗 Live Demo
+[![Live Demo](https://img.shields.io/badge/Live-Demo-blue?style=for-the-badge)](https://countriestaskfrontendmentor.vercel.app/)
 
-Check out the live version here: Countries Explorer
+## 📌 Features
+- 🔍 Search for countries by name
+- 🌐 Filter countries by region
+- 📄 View detailed country information (population, capital, region, etc.)
+- 🌙 Dark and Light theme toggle
 
-📌 Features
+## 🛠️ Technologies Used
+| Technology     | Description                |
+|---------------|---------------------------|
+| React.js      | Frontend framework       |
+| CSS Modules   | Scoped styling          |
+| Vite          | Build tool             |
 
-🔍 Search for countries by name
-
-🌐 Filter countries by region
-
-📄 View detailed country information (population, capital, region, etc.)
-
-🌙 Dark and Light theme toggle
-
-🛠️ Technologies Used
-
-Technology
-
-Description
-
-React.js
-
-Frontend framework
-
-REST API
-
-Country data source
-
-CSS Modules
-
-Scoped styling
-
-Vite
-
-Build tool
-
-🚀 Installation
-
+## 🚀 Installation
 Follow these steps to run the project locally:
 
+```bash
 # Clone the repository
 git clone https://github.com/yourusername/countriestaskfrontendmentor.git
 
@@ -53,17 +33,17 @@ npm install
 
 # Start the development server
 npm run dev
+```
 
-🌐 Live Demo URL
+## 🌐 Live Demo URL
+[![Live Demo](https://img.shields.io/badge/Live-Demo-blue?style=for-the-badge)](https://countriestaskfrontendmentor.vercel.app/)
 
-Countries Explorer
-
-🤝 Contributing
-
+## 🤝 Contributing
 Contributions are welcome! Feel free to open issues or submit pull requests for any improvements or bug fixes.
 
-📄 License
+## 📄 License
+This project is licensed under the **MIT License**.
 
-This project is licensed under the MIT License.
+---
+Crafted with ❤️ by [Your Name]
 
-Crafted with ❤️ by Mirgubad Akbarov
