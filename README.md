@@ -1,51 +1,69 @@
-Countries Explorer
+🌍 Countries Explorer
 
-This project is a web application that allows users to browse and search for countries worldwide. It displays detailed information about each country, including population, region, capital, and more. This project is based on the Frontend Mentor Countries API Challenge.
+Welcome to the Countries Explorer project! This web application allows users to explore detailed information about countries worldwide.
 
-Live Demo
+🔗 Live Demo
 
-Visit the live project at: Countries Explorer
+Check out the live version here: Countries Explorer
 
-Features
+📌 Features
 
-Search countries by name
+🔍 Search for countries by name
 
-Filter countries by region
+🌐 Filter countries by region
 
-View detailed information for each country
+📄 View detailed country information (population, capital, region, etc.)
 
-Dark and light theme toggle
+🌙 Dark and Light theme toggle
 
-Technologies Used
+🛠️ Technologies Used
+
+Technology
+
+Description
 
 React.js
 
+Frontend framework
+
+REST API
+
+Country data source
+
 CSS Modules
+
+Scoped styling
 
 Vite
 
-Installation
+Build tool
 
-Clone the repository:
+🚀 Installation
 
-git clone https://github.com/yourusername/countries-explorer.git
+Follow these steps to run the project locally:
 
-Navigate to the project folder:
+# Clone the repository
+git clone https://github.com/yourusername/countriestaskfrontendmentor.git
 
+# Navigate to the project folder
 cd countries-explorer
 
-Install dependencies:
-
+# Install dependencies
 npm install
 
-Start the development server:
-
+# Start the development server
 npm run dev
 
-Contributing
+🌐 Live Demo URL
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Countries Explorer
 
-License
+🤝 Contributing
+
+Contributions are welcome! Feel free to open issues or submit pull requests for any improvements or bug fixes.
+
+📄 License
 
 This project is licensed under the MIT License.
+
+Crafted with ❤️ by Mirgubad Akbarov
