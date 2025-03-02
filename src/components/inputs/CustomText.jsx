@@ -13,7 +13,7 @@ const CustomText = ({placeHolder, type, onChange, icon = null}) => {
                     ? " shadow-none text-white-500 bg-[#2b3743]"
                     : " shadow-gray-200 text-gray-500"
                 }
-                 px-5 py-2 max-w-[400px] w-[100%]
+                 px-5 py-2 max-w-[100%] w-[100%] md:max-w-[400px]
         `}
     >
       {icon && icon}

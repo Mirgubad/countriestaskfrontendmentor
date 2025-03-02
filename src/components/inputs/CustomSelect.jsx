@@ -1,11 +1,19 @@
-import React, {useState} from "react"
+import React, {useEffect, useState} from "react"
 import AsyncSelect from "react-select/async"
 import {useTheme} from "../../context/ThemeContext"
 
 const CustomAsyncSelect = ({placeholder, options, onChange}) => {
   const [selectedOption, setSelectedOption] = useState(null)
   const {isDarkMode} = useTheme()
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768)
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768)
+    }
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
+  }, [])
   const customStyles = {
     control: (provided) => ({
       ...provided,
@@ -43,7 +51,7 @@ const CustomAsyncSelect = ({placeholder, options, onChange}) => {
     container: (provided) => ({
       ...provided,
       width: "100%",
-      maxWidth: "260px", // Max width for the container
+      maxWidth: isMobile ? "100%" : "260px",
     }),
     menu: (provided) => ({
       ...provided,

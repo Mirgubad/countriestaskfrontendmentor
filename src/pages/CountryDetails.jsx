@@ -41,17 +41,17 @@ const CountryDetails = () => {
           icon={<FontAwesomeIcon icon={faArrowLeftLong} />}
         />
       </div>
-      <div className="flex flex-col sm:flex-row gap-20 mt-10 items-center">
+      <div className="flex flex-col flex-wrap lg:flex-row sm:flex-nowrap gap-20 mt-10 items-center">
         <div className="w-full max-w-[550px] max-h-[370px]">
           <img
             src={flag}
             alt={`Flag of ${name}`}
-            className="w-full h-auto  shadow-md"
+            className="w-full h-auto shadow-md"
           />
         </div>
-        <div className="w-full sm:w-2/3 my-3">
+        <div className="w-full sm:w-1/3 my-3">
           <h1 className="text-3xl font-bold ">{name}</h1>
-          <div className="flex justify-between gap-20 py-20">
+          <div className="flex flex-wrap sm:flex-nowrap justify-between gap-20 py-20">
             <div>
               <p className="text-xl my-2">
                 <strong className="font-bold">Native Name: </strong>
@@ -97,13 +97,13 @@ const CountryDetails = () => {
             </div>
           </div>
           {borders && (
-            <div className="flex text-xl my-2 items-center">
-              <strong className="font-bold">Border Countries: </strong>
-              <div className="flex gap-2 ml-3">
+            <div className="flex my-2 items-center flex-wrap">
+              <strong className="font-bold text-xl ">Border Countries: </strong>
+              <div className="flex flex-wrap mt-4 sm:mt-0 gap-2 ml-3">
                 {borders?.map((border) => (
                   <div
                     key={border}
-                    className="rounded border border-gray-300 px-2 py-1"
+                    className="rounded border border-gray-300 px-2 py-1 text-l"
                   >
                     {" "}
                     {border}
